@@ -1,0 +1,72 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  color: black;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.answer {
+  color: rgba(41, 50, 100, 1);
+  background-color: transparent;
+  border: 1px solid #4d5b9e;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  margin-right: 0.6rem;
+  margin-bottom: 0.2rem;
+  padding: 2px 8px;
+}
+.answer-selected {
+  background-color: red;
+}
+
+#correct {
+  background-color: #94d7a2;
+  border: 1px solid #94d7a2;
+}
+#incorrect {
+  background-color: #f8bcbc;
+  border: 1px solid #f8bcbc;
+}
+#not-selected {
+  color: rgba(41, 50, 100, 0.4);
+  border: 1px solid rgba(41, 50, 100, 0.4);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
