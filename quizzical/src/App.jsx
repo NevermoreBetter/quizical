@@ -44,9 +44,9 @@ function App() {
   //------------------------------------III-------------------------------
   function handleChooseAnswer(id, answer) {
     setQuestions((prevQuestion) =>
-      prevQuestion.map((question) => {
-        question.id === id ? { ...question, selected: answer } : question;
-      })
+      prevQuestion.map((question) =>
+        question.id === id ? { ...question, selected: answer } : question
+      )
     );
   }
 
