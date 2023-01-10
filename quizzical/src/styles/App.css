@@ -1,38 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@700&display=swap");
 #root {
+  font-family: Inter, Karla, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-  color: black;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-primary);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  color: #293264;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+.name {
+  font-family: "Karla";
+  font-size: 3rem;
+  line-height: 37px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+}
+
+.description {
+  font-family: "Inter";
+  font-size: 2rem;
+  line-height: 19px;
+  margin-bottom: 2rem;
+}
+
+.start-btn,
+.main-button {
+  background: #4d5b9e;
+  border-radius: 15px;
+  border: none;
+  padding: 1rem 2rem;
+  color: #f5f7fb;
+  cursor: pointer;
+}
+
+.question {
+  margin-bottom: 1rem;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 29px;
+  text-align: start;
+}
+
+.answer-container {
+  text-align: start;
+  margin-bottom: 2rem;
+}
 .answer {
+  cursor: pointer;
   color: rgba(41, 50, 100, 1);
   background-color: transparent;
-  border: 1px solid #4d5b9e;
-  font-size: 1rem;
-  border-radius: 0.3rem;
+  border: 0.794239px solid #4d5b9e;
+  border-radius: 7.94239px;
+  font-size: 1.2rem;
   margin-right: 0.6rem;
-  margin-bottom: 0.2rem;
-  padding: 2px 8px;
+  padding: 5px 18px;
+  margin-bottom: 0.5rem;
 }
+
 .answer-selected {
-  background-color: red;
+  cursor: pointer;
+  color: rgba(41, 50, 100, 1);
+  font-size: 1.2rem;
+  margin-right: 0.6rem;
+  padding: 5px 18px;
+  border: none;
+  background: #d6dbf5;
+  border-radius: 7.94239px;
+}
+
+.content-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score {
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 29px;
+  text-align: start;
+}
+
+.bottom-blob {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.top-blob {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #correct {
@@ -46,27 +205,4 @@ body {
 #not-selected {
   color: rgba(41, 50, 100, 0.4);
   border: 1px solid rgba(41, 50, 100, 0.4);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

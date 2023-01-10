@@ -1,9 +1,7 @@
 import React from "react";
-
 import { nanoid } from "nanoid";
 
 function Question(props) {
-  console.log(props);
   let answers = props.question.answers;
   function handleClick(answer) {
     if (props.question.checked) {
@@ -41,7 +39,7 @@ function Question(props) {
   return (
     <div>
       <div className="question">{props.question.question}</div>
-      {answerElement}
+      <div className="answer-container">{answerElement}</div>
     </div>
   );
 }
